@@ -4,10 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>проект Седона</title>
-</head> 
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
 <header class="header" data-test="header">
     <a class="header-logo">
-        <img class="header-logo"  src="#" width="140" height="70" alt="Логотип  Седоны"/>
+        <img class="header-logo"  src="images/header/logo.svg" width="140" height="70" alt="Логотип  Седоны"/>
     </a>
 <nav class="navigation-header">
 <ul class="header-navigation-list">
@@ -24,17 +25,21 @@
 <ul class="header-navigation-right">
     <il class="header-navigation-item">
         <a class="header-navigation-link" href="#">
-            <img class="header-navigation-search" src="#" alt="Поиск по Седоне" width="20" height="20"/>
+            <img class="header-navigation-search" src="images/header/search.svg" alt="Поиск по Седоне" width="20" height="20"/>
         <span class="visually-hidden">Поиск</span>
         </a>
     </il>
     <il class="header-navigation-item">
-        <a class="header-navigation-link" href="#">
-            <img class="header-navigation-cart" src="#" alt="Корзина Седоны" width="20" height="20"/>
+      <a class="header-navigation-link" href="#">
+        <img class="header-navigation-cart" src="images/header/cart.svg" alt="Корзина Седоны" width="20" height="20"/>
         <span class="visually-hidden">Корзина</span>
+      </a>
+          <sup><a class="favorites">12</a></sup>
         </a>
-    </il>
-</ul>
+
+
+      </il>
+    </ul>
 <div class="button-wrapper">
     <a class="button" href="#">ХОЧУ СЮДА!</a>
 </div>
@@ -43,18 +48,18 @@
 <main class="main" data test="main">
     <section class="about hero">
         <h1 class="visually-hidden"> Добро пожаловать в великолепную Седону, потому что Гранд-Каньон отстой</h1>
-        <img class="about-hero-mage" src="#" width="458" height="352" alt="Welcome to the gorgeous Sedona Because Grand Canyon sucks!"> 
-    </section> 
+        <img class="about-hero-mage" src="images/hero/welcome.svg" width="458" height="352" alt="Welcome to the gorgeous Sedona Because Grand Canyon sucks!">
+    </section>
     <section class="advant-travel">
         <h2 class="advant-travel-subtitle"> Седона-небольшой городок в Аризоне, заслуживающего большего!</h2>
         <p class="advant-travel-descr"> Рассмотрим причины, по которым Седона круче, чем Гранд-Каньон!</p>
             <ul class="advant-list">
-        <li class="advant-item advant-image">
-            <h3 class="advant-travel-subtitle-1">Настоящий городок</H3>
-                <p class="advant-travel-descr-1">Седона- не атракцион для туристов, там течет своя жизнь</p>
-        <img class="advant-image-1" alt="Городок Седона" src="#" width="800" height="385">
+        <li class="advant-item advant-city">
+            <h3 class="advant-travel-subtitle-1 advant-city-h3">Настоящий городок</H3>
+                <p class="advant-travel-descr-1 advant-city-desc ">Седона- не атракцион для туристов, там течет своя жизнь</p>
+        <img class="advant-image-1" alt="Городок Седона" src="images/advent-travel/travelhouse.jpg" width="800" height="385">
             </li>
-            <li class="advant-item advant">
+            <li class="advant-item advant-item-square">
                 <h3 class="advant-travel-subtitle-2">Небольшая площадь</H3>
                     <p class="advant-travel-descr-2">Все достопримичательности находятся очень близко</p>
                 </li>
@@ -69,7 +74,7 @@
             <li class="advant-item advant-image">
                 <h3 class="advant-travel-subtitle-5">Там есть мост дьявола</H3>
                     <p class="advant-travel-descr-5">Да, по нему можно пройти! Если вы осмелитесь, разумеется</p>
-            <img class="advant-image-1" alt="Мост дьявола" src="#" width="800" height="385">
+            <img class="advant-image-1" alt="Мост дьявола" src="images/advent-travel/mountains.jpg" width="800" height="385">
                 </li>
     </ul>
     </section>
@@ -78,17 +83,17 @@
     <p class="section services">Опытный персонал и качественное обслуживание!</p>
 <ul class="section-service-list">
     <li class="section-service-item-1">
-        <img class="section-service-image-1" alt="жилье" src="#" width="75" height="72">
+        <img class="section-service-image-1" alt="жилье" src="images/services/house.svg" width="75" height="72">
         <h3 class="section-service-subtitle-1"> Жилье</h3>
         <p class="section-service-description-1">Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
     </li>
     <li class="section-service-item-2">
-        <img class="section-service-image-2" alt="еда" src="#" width="74" height="70">
+        <img class="section-service-image-2" alt="еда" src="images/services/burger.svg" width="74" height="70">
         <h3 class="section-service-subtitle-2"> Еда</h3>
         <p class="section-service-description-2">Всегда заказывайте топовый фирменный бургер, вы не разочаруетесь!</p>
     </li>
     <li class="section-service-item-3">
-        <img class="section-service-image-3" alt="сувениры" src="#" width="74" height="70">
+        <img class="section-service-image-3" alt="сувениры" src="images/services/diy.svg" width="75" height="72">
         <h3 class="section-service-subtitle-3"> Сувениры</h3>
         <p class="section-service-description-3">Не только китайского, но и настоящего местного производства!</p>
     </li>
@@ -118,19 +123,19 @@
             <li class="social-list-item">
                 <a class="social-link" href="https://vk.com/htmlacademy">
                 <span class="visually-hidden">Vkontakte</span>
-                <img span="social-image" alt="Мы в контакте" src="#" width="24" height="14" />
+                <img span="social-image" alt="Мы в контакте" src="images/footer/Vkontakte.svg" width="24" height="14" />
             </a>
             </li>
             <li class="social-list-item">
                 <a class="social-link" href="https://t.me/htmlacademy">
                 <span class="visually-hidden">Telegram</span>
-                <img span="social-image" alt="Мы в телеграмме" src="#" width="18" height="16" />
+                <img span="social-image" alt="Мы в телеграмме" src="images/footer/Telegram.svg" width="18" height="16" />
             </a>
             </li>
             <li class="social-list-item">
                 <a class="social-link" href="https://youtube.com/user/htmlacademyru">
                 <span class="visually-hidden">Youtube</span>
-                <img span="social-image" alt="Мы на Youtube" src="#" width="22" height="17" />
+                <img span="social-image" alt="Мы на Youtube" src="images/footer/Youtube.svg" width="22" height="17" />
             </a>
             </li>
         </ul>
@@ -140,9 +145,21 @@
     </section>
     <section class="footer-logo">
         <a class="footer-logo-page" href="https://htmlacademy.ru/">
-            <img class="footer-logo-page" alt="Сайт разработан HTML академией" src="#" width="114.9" height="32,9"/>
+            <img class="footer-logo-page" alt="Сайт разработан HTML академией" src="images/footer/HTML Academy.svg" width="114.9" height="32,9"/>
         </a>
-    </section>
+
+
+
+
+      </section>
 </footer>
+
+
+
+
 </body>
+
+
+
+
 </html>
