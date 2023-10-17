@@ -16,7 +16,7 @@
           height="70"
         />
       </a>
-      <nav class="navigation">
+      <nav class="header-navigation">
         <ul class="navigation-list">
           <li class="navigation-item">
             <a class="navigation-link" href="index.html">Главная</a>
@@ -54,12 +54,12 @@
             </a>
           </li>
         </ul>
-        <div class="button-wrapper">
-          <a class="button" href="#">Хочу сюда!</a>
-        </div>
-      </nav>
+             </nav>
+             <div class="button-wrapper">
+              <a class="button" href="#">Хочу сюда!</a>
+            </div>
     </header>
-    <main class="main-catalog" data-test="main">
+    <main class="main-catalog main-container" data-test="main">
       <section class="filters" data-test="filter">
         <header class="filters-header">
           <h1 class="filters-header-title">Гостиницы Седоны</h1>
@@ -87,10 +87,11 @@
           action="https://echo.htmlacademy.ru/"
           method="get"
         >
-          <fieldset class="catalog-filter-group">
-            <legend class="catalog-filter-title">Инфраструктура:</legend>
-            <ul class="catalog-filter-list">
-              <li class="catalog-filter-item">
+        <div class="left-filter"
+          <fieldset class="infrastrucure">
+            <legend class="infrastrucure-title">Инфраструктура:</legend>
+            <ul class="infrastrucure-list">
+              <li class="infrastrucure-item">
                 <label class="control">
                   <input
                     class="control-input"
@@ -98,10 +99,10 @@
                     name="swimming-pool"
                     checked
                   />
-                  Бассейн
+                  <span>Бассейн</span>
                 </label>
               </li>
-              <li class="catalog-filter-item">
+              <li class="infrastrucure-item">
                 <label class="control">
                   <input
                     class="control-input"
@@ -109,21 +110,21 @@
                     name="parking"
                     checked
                   />
-                  Парковка
+                  <span>Парковка</span>
                 </label>
               </li>
-              <li class="catalog-filter-item">
+              <li class="infrastrucure-item">
                 <label class="control">
                   <input class="control-input" type="checkbox" name="wi-fi" />
-                  Wi-Fi
+                 <span>Wi-Fi</span>
                 </label>
               </li>
             </ul>
           </fieldset>
-          <fieldset class="catalog-filter-group">
-            <legend class="catalog-filter-title">Тип жилья:</legend>
-            <ul class="catalog-filter-list">
-              <li class="catalog-filter-item">
+          <fieldset class="hometypes">
+            <legend class="hometypes-title">Тип жилья:</legend>
+            <ul class="hometypes-list">
+              <li class="hometypes-item">
                 <label class="control">
                   <input
                     class="control-input"
@@ -132,10 +133,10 @@
                     value="hotel"
                     checked
                   />
-                  Гостиница
+                  <span>Гостиница</span>
                 </label>
               </li>
-              <li class="catalog-filter-item">
+              <li class="hometypes-item">
                 <label class="control">
                   <input
                     class="control-input"
@@ -143,10 +144,10 @@
                     name="housing-type"
                     value="motel"
                   />
-                  Мотель
+                 <span>Мотель</span>
                 </label>
               </li>
-              <li class="catalog-filter-item">
+              <li class="hometypes-item">
                 <label class="control">
                   <input
                     class="control-input"
@@ -154,18 +155,19 @@
                     name="housing-type"
                     value="apartments"
                   />
-                  Апартаменты
+                  <span>Апартаменты</span>
                 </label>
               </li>
             </ul>
           </fieldset>
-          <fieldset class="catalog-filter-group">
-            <legend class="catalog-filter-title">Стоимость, ₽:</legend>
+        </div>
+          <fieldset class="price-range">
+            <legend class="price-range-title">Стоимость, ₽:</legend>
             <div class="cost-regulator">
-              <label>
+              <label class="price-range-label">
                 <input type="number" name="cost" value="0" />
               </label>
-              <label>
+              <label class="price-range-label">
                 <input type="number" name="cost" value="9000" />
               </label>
             </div>
@@ -181,12 +183,14 @@
         </form>
       </section>
       <section class="catalog" data-test="catalog">
+        <div class="catalog-up">
         <h2 class="title">Найдено гостиниц: 38</h2>
         <select class="select-control" aria-label="Сортировка">
           <option value="cheap">Сначала дешёвое</option>
           <option value="popular">Сначала популярное</option>
           <option value="expensive">Сначала дорогое</option>
         </select>
+        <div class="select-control-block">
         <button
           type="submit"
           class="button-view button-view-active"
@@ -221,6 +225,8 @@
           />
           <span class="visually-hidden">Показать список</span>
         </button>
+        </div>
+        </div>
         <ul class="hotel-list">
           <li class="hotel-item">
             <article class="hotel-card">
@@ -251,7 +257,7 @@
                   src="images/hotel list/star.svg"
                   width="18"
                   height="17"
-                  alt="Гостиница GreenTree Inn"
+                  alt="Гостиница Amara Resort & Spa"
                 />
               </div>
               <div class="hotel-card-rating">
@@ -322,7 +328,7 @@
                 <span class="visually-hidden">3 звезды</span>
                 <img
                   class="stars stars-3"
-                  src="images/hotel list/star.svg/star.svg"
+                  src="images/hotel list/star.svg"
                   height="17"
                   alt="Гостиница DesertQuailInn"
                 />
@@ -358,7 +364,7 @@
                 <span class="visually-hidden">2 звезды</span>
                 <img
                   class="stars stars-2"
-                  src="images/catalog/star.svg"
+                  src="images/hotel list/star.svg"
                   width="18"
                   height="17"
                   alt="Гостиница GreenTree Inn"
@@ -372,7 +378,6 @@
         </ul>
         <ul class="pagination">
           <li class="pagination-item">
-            <a class="pagination-link pagination-current">1</a>
             <a class="pagination-link is-active">1</a>
           </li>
           <li class="pagination-item">
@@ -384,24 +389,24 @@
           <li class="pagination-item">
             <a class="pagination-link" href="#">4</a>
           </li>
-          <li class="pagination-item pagination-dots">
-            <a class="pagination-link" href="#">...</a>
-          </li>
-
-          <li class="pagination-item">
+          <li class="pagination-item ">
             <a class="pagination-link pagination-dots" href="#">...</a>
           </li>
+
+
           <li class="pagination-item">
             <a class="pagination-link" href="#">10</a>
           </li>
         </ul>
       </section>
       <section class="subscribe-catalog" data-test="subscribe">
+        <div class="subscribe-catalog-text">
         <h2 class="title">Подпишитесь на рассылку</h2>
         <p class="subsribe-catalog-description">
-          Только полезная информация и никакого спама,<br />
+          Только полезная информация и никакого спама,<span class="custom-br"></span>
           честное бойскаутское!
         </p>
+        </div>
         <form
           class="search-form"
           action="https://echo.htmlacademy.ru/"
