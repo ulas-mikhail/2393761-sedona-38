@@ -4,6 +4,7 @@
     <meta charset="utf-8" />
     <title>HTML Academy: Седона</title>
     <link rel="stylesheet" href="styles/styles.css" />
+
   </head>
   <body>
     <header class="page-header" data-test="header">
@@ -51,13 +52,12 @@
                 width="20"
                 height="20"
               />
-              <span class="visually-hidden">12</span>
             </a>
           </li>
         </ul>
       </nav>
       <div class="button-wrapper">
-        <a class="button" href="#">Хочу сюда!</a>
+        <a class="button header-btn" href="#">Хочу сюда!</a>
       </div>
     </header>
     <main class="main-container main-index" data-test="main">
@@ -74,7 +74,7 @@
         />
       </section>
       <section class="advantages" data-test="advantages">
-        <div class="advantages-main-text">
+        <div class="section-head">
           <h2 class="title">
             Седона — небольшой городок в Аризоне,<span class="custom-br"></span>
             заслуживающий большего!
@@ -84,7 +84,7 @@
           </p>
         </div>
         <ul class="advantages-list">
-          <li class="advantages-item">
+          <li class="advantages-item advantages-item-wide-item">
             <div class="item-text-box">
               <div class="advantages-text-wrapper">
                 <h3 class="advantages-title title-white">Настоящий городок</h3>
@@ -93,13 +93,14 @@
                 </p>
               </div>
             </div>
-            <img
+            <div class="advantages-image-wrapper">
+              <img
               class="advantages-image"
               alt="Городок в Седоне"
               src="images/advent-travel/travelhouse.jpg"
               width="800"
-              height="385"
-            />
+              height="385"/>
+            </div>
           </li>
           <li class="advantages-item">
             <div class="item-text-box">
@@ -131,7 +132,13 @@
               </div>
             </div>
           </li>
-          <li class="advantages-item">
+          <li class="advantages-item advantages-item-wide">
+
+
+
+
+
+
             <div class="item-text-box">
               <div class="advantages-text-wrapper">
                 <h3 class="advantages-title title-white">
@@ -142,18 +149,21 @@
                 </p>
               </div>
             </div>
-            <img
+            <div class="advantages-text-wrapper">
+              <img
               class="advantages-image"
               alt="Мост дьявола"
               src="images/advent-travel/mountains.jpg"
               width="800"
               height="385"
             />
+
+            </div>
           </li>
         </ul>
       </section>
       <section class="services">
-        <div class="services-main-text">
+        <div class="section-head">
           <h2 class="title">
             Приезжайте в Седону отдохнуть<span class="custom-br"></span>
             в комфорте и уюте!
@@ -164,61 +174,56 @@
         </div>
         <ul class="services-list">
           <li class="services-item">
-            <div class="item-text-box">
-              <div class="services-text-wrapper">
-                <img
-                  class="services-image"
-                  alt="Жильё"
-                  src="images/services/house.svg"
-                  width="75"
-                  height="72"
-                />
+           <div class="services-item-wrapper">
+            <img
+            class="services-image"
+            alt="Жильё"
+            src="images/services/house.svg"
+            width="75"
+            height="72"
+          />
+
                 <h3 class="services-title">Жильё</h3>
                 <p class="services-description">
-                  Рекомендуем пожить в настоящем мотеле, всё как в кино!
+                  Рекомендуем пожить <span class="custom-br"></span>" в настоящем мотеле,<span class="custom-br"></span> всё как в кино!
                 </p>
-              </div>
             </div>
           </li>
           <li class="services-item">
-            <div class="item-text-box">
-              <div class="services-text-wrapper">
-                <img
-                  class="services-image"
-                  alt="Еда"
-                  src="images/services/burger.svg"
-                  width="74"
-                  height="70"
-                />
-                <h3 class="services-title">Еда</h3>
-                <p class="services-description">
-                  Всегда заказывайте топовый фирменный бургер, вы не
-                  разочаруетесь!
-                </p>
-              </div>
-            </div>
+           <div class="services-item-wrapper">
+            <img
+            class="services-image"
+            alt="Еда"
+            src="images/services/burger.svg"
+            width="74"
+            height="70"
+          />
+          <h3 class="services-title">Еда</h3>
+          <p class="services-description">
+            Всегда заказывайте <span class="custom-br"></span> топовый фирменный бургер, вы не
+            разочаруетесь!
+          </p>
+           </div>
           </li>
           <li class="services-item">
-            <div class="item-text-box">
-              <div class="services-text-wrapper">
-                <img
-                  class="services-image"
-                  alt="Сувениры"
-                  src="images/services/diy.svg"
-                  width="64"
-                  height="76"
-                />
-                <h3 class="services-title">Сувениры</h3>
-                <p class="services-description">
-                  Не только китайского, но и настоящего местного производства!
-                </p>
-              </div>
+           <div class="services-item-wrapper">
+            <img
+            class="services-image"
+            alt="Сувениры"
+            src="images/services/diy.svg"
+            width="64"
+            height="76"
+          />
+          <h3 class="services-title">Сувениры</h3>
+          <p class="services-description">
+            Не только китайского, <span class="custom-br"></span> и настоящего местного производства!
+          </p>
             </div>
           </li>
         </ul>
       </section>
       <section class="search" data-test="search">
-        <div class="search-main-text">
+        <div class="section-head">
           <h2 class="title">Заинтересовались?</h2>
           <p class="search-main-description">
             Укажите предполагаемые даты поездки,<span class="custom-br"></span>
@@ -230,7 +235,7 @@
         </div>
       </section>
       <section class="subscribe" data-test="subscribe">
-        <div class="subscribe-main-text">
+        <div class="section-head">
           <h2 class="title">Подпишитесь на рассылку</h2>
           <p class="subsribe-main-description">
             Только полезная информация и никакого спама,<span class="custom-br"></span>
