@@ -14,7 +14,7 @@
   font-display: swap;
 }
 
-*:focus {
+*:focus-visible {
   outline: 3px solid #82b3d3;
 }
 
@@ -98,7 +98,7 @@ body {
 }
 
 .button:hover,
-.button:focus {
+.button:focus-visible {
   background-color: #615048;
 }
 
@@ -126,11 +126,11 @@ body {
 }
 
 .subscribe-button:hover,
-.subscribe-button:focus,
+.subscribe-button:focus-visible,
 .button-apply:hover,
-.button-apply:focus,
+.button-apply:focus-visible,
 .button-favorites:hover,
-.button-favorites:focus {
+.button-favorites:focus-visible {
   background-color: #68a2ca;
 }
 
@@ -157,7 +157,7 @@ body {
   opacity: 0.6;
 }
 
-.button-reset:focus {
+.button-reset:focus-visible {
   outline: none;
   background-color: transparent;
   border: 3px solid #83b3d3;
@@ -188,7 +188,7 @@ body {
 }
 
 .button-favorites-active:hover,
-.button-favorites-active:focus {
+.button-favorites-active:focus-visible {
   background-color: #6c9e42;
 }
 
@@ -211,7 +211,7 @@ body {
   border: 2px solid black;
 }
 
-.button-view:focus {
+.button-view:focus-visible {
   border: 2px solid #68a2ca;
   outline: none;
 }
@@ -223,7 +223,6 @@ body {
 
 .page-header {
   display: flex;
-  flex-wrap: wrap;
   box-sizing: border-box;
   padding: 0 70px;
 }
@@ -288,15 +287,17 @@ body {
 
 
 .navigation-link:not(.navigation-link-currect):hover,
-.navigation-link:not(.navigation-link-currect):focus,
+.navigation-link:not(.navigation-link-currect):focus-visible,
 .navigation-link-search:hover,
-.navigation-link-search:focus,
+.navigation-link-search:focus-visible,
 .navigation-link-favorite:hover,
-.navigation-link-favorite:focus,
+.navigation-link-favorite:focus-visible,
 .footer-logo-link:hover,
-.footer-logo-link:focus,
+.footer-logo-link:focus-visible,
 .footer-phone .phone:hover,
-.footer-phone .phone:focus {
+.footer-phone .phone:focus-visible,
+.hotel-card-link:hover,
+.hotel-card-link:focus-visible {
   color: #756157;
 }
 
@@ -304,7 +305,8 @@ body {
 .navigation-link-search:active,
 .navigation-link-favorite:active,
 .footer-logo-link:active,
-.footer-phone .phone:active {
+.footer-phone .phone:active,
+.hotel-card-link:active {
   color: rgba(117, 97, 87, 0.3);
 }
 
@@ -334,11 +336,14 @@ body {
   justify-content: center;
   align-items: center;
   top: 11px;
-  left: calc(100%-24px);
+  left: calc(100% - 24px);
 
 }
 
 .button-wrapper {
+  display: flex;
+  gap: 5px;
+  flex-direction: column;
   padding: 14px 0;
   width: 160px;
 
@@ -414,6 +419,7 @@ body {
 }
 
 .item-text-box {
+  height: 100%;
   width: 400px;
   min-height: 385px;
   text-align: center;
@@ -603,6 +609,8 @@ body {
 .email-field {
   font-size: 18px;
   line-height: 24px;
+  font: inherit;
+  font-weight: 700;
   border-radius: 4px 0 0 4px;
   padding: 12px 20px;
   width: 412px;
@@ -611,11 +619,15 @@ body {
   background: #F2F2F2;
 }
 
-.email-field:hover {
+.email-field:hover,
+.price-from:hover,
+.price-to:hover {
   background-color: #e6e6e6;
 }
 
-.email-field:focus {
+.email-field:focus,
+.price-from:focus,
+.price-to:focus {
   background-color: #e6e6e6;
   outline: 3px solid #83b3d3;
 
@@ -651,7 +663,7 @@ body {
 }
 
 .social-item-icon:hover,
-.social-item-icon:focus {
+.social-item-icon:focus-visible {
   color: #68a2ca;
 }
 
@@ -797,8 +809,69 @@ body {
   display: flex;
 }
 
-.control-inscription {
-  margin-left: 16px;
+.control {
+  position: relative;
+  display: block;
+  padding-left: 36px;
+  line-height: 23px;
+  color: white;
+}
+
+.control:hover {
+  color: rgba(255, 255, 255, 0.6);
+  cursor: pointer;
+}
+
+.control:active {
+  color: rgba(255, 255, 255, 0.3);
+  cursor: pointer;
+}
+
+.control-mark {
+  position: absolute;
+  top: 2px;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  background-color: white;
+  border-radius: 4px;
+}
+
+
+.control-input[type="checkbox"]:checked + .control-mark {
+  background-image: url("../images/form/check-mark.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.control-input[type="radio"] + .control-mark {
+  border-radius: 50%;
+}
+
+.control-input[type="radio"]:checked + .control-mark::before {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  width: 10px;
+  height: 10px;
+  background-color: #3F5E72;
+  border-radius: 50%;
+  content: "";
+}
+
+.control-input:hover + .control-mark {
+  background-color: white;
+  opacity: 0.6;
+}
+
+.control-input:focus-visible + .control-mark,
+.range-toggle:focus-visible {
+  outline: 3px solid #83b3d3;
+}
+
+.control-input:active + .control-mark {
+  outline: 2px solid #83b3d3;
+  opacity: 0.3;
 }
 
 .left-filter {
@@ -807,13 +880,18 @@ body {
 }
 
 .infrastrucure,
+.hometypes,
 .price-range {
   border: none;
   padding: 0;
-  margin: 0;
   margin-right: 70px;
+  margin: 0;
 }
 
+.infrastrucure,
+.price-range {
+  margin-right: 70px;
+}
 
 .infrastrucure-list,
 .hometypes-list {
@@ -845,19 +923,15 @@ body {
   margin-bottom: 32px;
 }
 
-.hometypes {
-  border: none;
-  padding: 0;
-  margin: 0;
-}
 
 .price-range {
-  max-width: 286px;
+  max-width: 288px;
 }
 
-.cost-regulator {
+.range-wrapper-inputs {
   display: flex;
   gap: 2px;
+  line-height: 24px;
 
 }
 
@@ -865,40 +939,82 @@ body {
   border-radius: 4px 0 0 4px;
 }
 
-price-to {
+.price-to {
   border-radius: 0 4px 4px 0;
 }
 
 .price-range-label {
-  display: flex;
-  align-items: center;
-  padding: 12px 20px;
-  background-color: white;
+  position: relative;
 }
 
+
+
+
 .price-range-label span {
-  color: black;
-  opacity: 0.3;
+  color: rgba(0, 0, 0, 0.3);
+  position: absolute;
+  top: 10px;
+  right: 20px;
 }
 
 .price-range-label input {
-  width: 100%;
-  font-size: 700;
-  line-height: 24px;
-  padding: 0;
-  border: 0;
-  outline: none;
+  width: 141px;
+  height: 48px;
+  display: inline-flex;
+  background-color: #FFF;
+  align-items: center;
+  padding: 12px 15px;
+  box-sizing: border-box;
+  font-family: inherit;
+  font-weight: 700;
+  border: 3px solid transparent;
+  font-size: inherit;
 }
+
+.range-scale {
+  position: relative;
+  height: 4px;
+  margin-top: 36px;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.range-bar {
+  position: relative;
+  height: 4px;
+  background-color: white;
+}
+
+.range-toggle {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.range-toggle:active {
+  outline: 2px solid #83B3D3;
+}
+
+.toggle-min {
+  top: -8px;
+  left: 0;
+}
+
+.toggle-max {
+  top: -8px;
+  right: 0;
+}
+
 
 .filters-button {
   margin-top: 56px;
   width: 191px;
 }
 
-.control {
-  line-height: 23px;
-  color: white;
-}
+
 
 .catalog .title {
   color: black;
@@ -928,6 +1044,7 @@ price-to {
   width: 290px;
   height: 49px;
   border: 2px solid #E5E5E5;
+  border-radius: 4px;
   box-sizing: border-box;
   padding-left: 20px;
   padding-right: 40px;
@@ -941,7 +1058,7 @@ price-to {
 
 .select-control:hover,
 .select-control:focus {
-  border: 2px solif #68a2ca;
+  border: 2px solid #68a2ca;
 }
 
 .select-control:focus {
@@ -974,8 +1091,8 @@ price-to {
 
 }
 
-.hotel-card-title {
-  margin: 16px 0;
+.hotel-card-image:hover {
+  opacity: 0.9;
 
 }
 
@@ -983,12 +1100,23 @@ price-to {
   display: block;
 }
 
-.hotel-card-link {
+.hotel-card-image:active {
+  opacity: 0.6;
+
+}
+
+.hotel-card-title {
   font-size: 24px;
   font-weight: 700;
   line-height: 28px;
-  text-decoration: none;
   color: #333;
+  margin: 16px 0;
+}
+
+.hotel-card-link {
+
+  text-decoration: none;
+  color: black
 }
 
 .hotel-list {
@@ -1010,8 +1138,7 @@ price-to {
 }
 
 .hotel-card .price {
-  width: max-content;
-  flex-shrink: 0;
+  overflow-wrap: anywhere;
 }
 
 .card-wrapper-btn {
@@ -1033,7 +1160,7 @@ price-to {
 .hotel-card-rating {
   background-color: #F2F2F2;
   border-radius: 4px;
-  height: 37px;
+  min-height: 37px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1077,7 +1204,7 @@ price-to {
 }
 
 .pagination-link:not(.is-active, .pagination-dots):hover,
-.pagination-link:not(.is-active, .pagination-dots):focus {
+.pagination-link:not(.is-active, .pagination-dots):focus-visible {
   background-color: #68a2ca;
 }
 
@@ -1097,7 +1224,7 @@ price-to {
 }
 
 .pagination-link.is-active:hover,
-.pagination-link.is-active:focus,
+.pagination-link.is-active:focus-visible,
 .pagination-link.is-active:active {
   border: none;
 }

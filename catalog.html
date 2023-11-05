@@ -86,28 +86,31 @@
               <li class="infrastrucure-item">
                 <label class="control">
                   <input
-                    class="control-input"
+                    class="visually-hidden control-input"
                     type="checkbox"
                     name="swimming-pool"
                     checked
-                  />
+                  >
+                  <span class="control-mark"></span>
                   <span class="control-inscription">Бассейн</span>
                 </label>
               </li>
               <li class="infrastrucure-item">
                 <label class="control">
                   <input
-                    class="control-input"
+                    class="visually-hidden control-input"
                     type="checkbox"
                     name="parking"
                     checked
-                  />
+                  >
+                  <span class="control-mark"></span>
                   <span class="control-inscription">Парковка</span>
                 </label>
               </li>
               <li class="infrastrucure-item">
                 <label class="control">
-                  <input class="control-input" type="checkbox" name="wi-fi" />
+                  <input class="visually-hidden control-input" type="checkbox" name="wi-fi"  >
+                  <span class="control-mark"></span>
                  <span class="control-inscription">Wi-Fi</span>
                 </label>
               </li>
@@ -119,34 +122,37 @@
               <li class="hometypes-item">
                 <label class="control">
                   <input
-                    class="control-input"
+                    class="visually-hidden control-input"
                     type="radio"
                     name="housing-type"
                     value="hotel"
                     checked
-                  />
+                  >
+                  <spanc class="control-mark"></spanc>
                   <span class="control-inscription">Гостиница</span>
                 </label>
               </li>
               <li class="hometypes-item">
                 <label class="control">
                   <input
-                    class="control-input"
+                    class="visually-hidden control-input"
                     type="radio"
                     name="housing-type"
                     value="motel"
-                  />
+                  >
+                  <span class="control-mark"></span>
                  <span class="control-inscription">Мотель</span>
                 </label>
               </li>
               <li class="hometypes-item">
                 <label class="control">
                   <input
-                    class="control-input"
+                    class=" visually-hidden control-input"
                     type="radio"
                     name="housing-type"
                     value="apartments"
-                  />
+                  >
+                  <span class="control-mark"></span>
                   <span class="control-inscription">Апартаменты</span>
                 </label>
               </li>
@@ -155,15 +161,25 @@
         </div>
           <fieldset class="price-range">
             <legend class="price-range-title">Стоимость, ₽:</legend>
-            <div class="cost-regulator">
-              <label class="price-range-label price-from">
-                <input type="text" name="cost" value="0" />
+            <div class="range-wrapper-inputs">
+              <label class="price-range-label ">
+                <input class="price-from" type="text" name="cost" value="0" />
                 <span>от</span>
               </label>
-              <label class="price-range-label price-to">
-                <input type="text" name="cost" value="9000" />
+              <label class="price-range-label">
+                <input class="price-to" type="text" name="cost" value="9000" />
                 <span>до</span>
               </label>
+            </div>
+            <div class="range-scale">
+              <div class="range-bar" style="left: 0; width: 226px">
+                <button class="range-toggle toggle-min">
+                  <span class="visually-hidden">Изменить минимальную цену</span>
+                </button>
+                <button class="range-toggle toggle-max">
+                  <span class="visually-hidden">Изменить максимальную цену</span>
+                </button>
+              </div>
             </div>
           </fieldset>
           <div class="filters-button">
@@ -224,8 +240,8 @@
         </div>
         <ul class="hotel-list">
           <li class="hotel-item">
-            <div class="hotel-card">
-              <a class="hotel-card-link" href="#">
+            <article class="hotel-card">
+              <a tabindex="-1" href="#">
                 <img
                   class="hotel-card-image"
                   src="images/hotel list/AmaraResortSpa.jpg"
@@ -233,8 +249,11 @@
                   height="212"
                   alt="Гостиница Amara Resort & Spa"
                 />
-                <h3 class="hotel-card-title">Amara Resort & Spa</h3>
+
               </a>
+              <h3 class="hotel-card-title">
+                <a class="hotel-card-link" href="#" tabindex="-1">Amara Resort & Spa</a>
+              </h3>
            <p class="hotel-card-price">
             <span>Гостиница</span>
             <span class="price">От 4000 ₽</span>
@@ -257,8 +276,8 @@
             </article>
           </li>
           <li class="hotel-item">
-            <div class="hotel-card">
-              <a class="hotel-card-link" href="#">
+            <article class="hotel-card">
+              <a tabindex="-1" href="#">
                 <img
                   class="hotel-card-image"
                   src="images/hotel list/VillasatPocoDiablo.jpg"
@@ -266,8 +285,11 @@
                   height="212"
                   alt="Гостиница Villas at Poco Diablo"
                 />
-                <h3 class="hotel-card-title">Villas at Poco Diablo</h3>
+
               </a>
+              <h3 class="hotel-card-title">
+                <a class="hotel-card-link" href="#" tabindex="-1">Villas at Poco Diablo</a>
+              </h3>
                 <p class="hotel-card-price">
                 <span>Гостиница</span>
                 <span class="price">От 5000 ₽</span>
@@ -291,7 +313,7 @@
           </li>
           <li class="hotel-item">
             <article class="hotel-card">
-              <a class="hotel-card-link" href="#">
+              <a tabindex="-1" href="#">
                 <img
                   class="hotel-card-image"
                   src="images/hotel list/DesertQuailInn.jpg"
@@ -299,8 +321,11 @@
                   height="212"
                   alt="Гостиница Desert Quail Inn"
                 />
-                <h3 class="hotel-card-title">Desert Quail Inn</h3>
+
               </a>
+              <h3 class="hotel-card-title">
+                <a class="hotel-card-link" href="" tabindex="-1">Desert Quail Inn</a>
+              </h3>
               <p class="hotel-card-price">
                 <span>Гостиница</span>
                 <span class="price">От 2500 ₽</span>
@@ -323,7 +348,7 @@
             </li>
           <li class="hotel-item">
             <article class="hotel-card">
-              <a class="hotel-card-link" href="#">
+              <a tabindex="-1" href="#">
                 <img
                   class="hotel-card-image"
                   src="images/hotel list/GreenTreeInn.jpg"
@@ -331,8 +356,11 @@
                   height="212"
                   alt="Гостиница GreenTree Inn"
                 />
-                <h3 class="hotel-card-title">GreenTree Inn</h3>
+
               </a>
+              <h3 class="hotel-card-title">
+                <a class="hotel-card-link" href="#" tabindex="-1">GreenTree Inn</a>
+              </h3>
               <p class="hotel-card-price">
                 <span>Гостиница</span>
                 <span class="price">От 1500 ₽</span>
