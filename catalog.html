@@ -1,11 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
   <head>
     <meta charset="UTF-8" />
     <title>HTML Academy: Седона</title>
-    <link rel="stylesheet" href="styles/styles.css" />
+    <link rel="stylesheet" href="styles/styles.css" >
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
   </head>
   <body>
+    <div class="page-wrapper">
     <header class="page-header" data-test="header">
       <a class="navigation-logo" href="index.html">
         <img
@@ -48,19 +50,18 @@
             </a>
           </li>
         </ul>
-             </nav>
+      </nav>
              <div class="button-wrapper">
               <a class="button header-btn" href="#">Хочу сюда!</a>
             </div>
     </header>
     <main class="main-catalog main-container" data-test="main">
       <section class="filters" data-test="filter">
-
         <header class="filters-header">
           <h1 class="filters-header-title">Гостиницы Седоны</h1>
           <ol class="breadcrumbs">
-            <li class="breadcrumbs-item breadcrumbs-arrow">
-              <a class="breadcrumbs-link  home-icon" href="index.html" title="Переход на главную страницу">
+            <li class="breadcrumbs-item ">
+              <a class="breadcrumbs-link" href="index.html" title="Переход на главную страницу">
                 <svg aria-hidden="true" focusable="false" width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path fill="currentColor" d="M6.37109 0.5L0.371094 6.30006V12.5001H12.3711V6.30006L6.37109 0.5ZM11.3711 11.5001H1.37109V6.70005L6.37109 1.9L11.3711 6.70005V11.5001Z"/>
                   <path fill="currentColor" d="M4.37109 10.5001H5.37109V8.00005H7.37109V10.5001H8.37109V7.00005H4.37109V10.5001Z" />
@@ -109,7 +110,7 @@
               </li>
               <li class="infrastrucure-item">
                 <label class="control">
-                  <input class="visually-hidden control-input" type="checkbox" name="wi-fi"  >
+                  <input class="visually-hidden control-input" type="checkbox" name="wi-fi">
                   <span class="control-mark"></span>
                  <span class="control-inscription">Wi-Fi</span>
                 </label>
@@ -128,7 +129,7 @@
                     value="hotel"
                     checked
                   >
-                  <spanc class="control-mark"></spanc>
+                  <span class="control-mark"></span>
                   <span class="control-inscription">Гостиница</span>
                 </label>
               </li>
@@ -150,8 +151,7 @@
                     class=" visually-hidden control-input"
                     type="radio"
                     name="housing-type"
-                    value="apartments"
-                  >
+                    value="apartments">
                   <span class="control-mark"></span>
                   <span class="control-inscription">Апартаменты</span>
                 </label>
@@ -163,35 +163,30 @@
             <legend class="price-range-title">Стоимость, ₽:</legend>
             <div class="range-wrapper-inputs">
               <label class="price-range-label ">
-                <input class="price-from" type="text" name="cost" value="0" />
+                <input class="price-from" type="number" name="min-value" value="0">
                 <span>от</span>
               </label>
               <label class="price-range-label">
-                <input class="price-to" type="text" name="cost" value="9000" />
+                <input class="price-to" type="number" name="max-value" value="9000">
                 <span>до</span>
               </label>
             </div>
             <div class="range-scale">
               <div class="range-bar" style="left: 0; width: 226px">
-                <button class="range-toggle toggle-min">
+                <button  class="range-toggle toggle-min" type="button">
                   <span class="visually-hidden">Изменить минимальную цену</span>
                 </button>
-                <button class="range-toggle toggle-max">
+                <button  class="range-toggle toggle-max" type="button">
                   <span class="visually-hidden">Изменить максимальную цену</span>
                 </button>
               </div>
             </div>
           </fieldset>
           <div class="filters-button">
-            <button class="button button-apply" type="submit" name="apply">
-              Применить
-            </button>
-            <button class="button button-reset" type="reset" name="reset">
-              Сбросить
-            </button>
+            <button class="button button-apply" type="submit" name="apply">Применить</button>
+            <button class="button button-reset" type="reset" name="reset">Сбросить</button>
           </div>
         </form>
-      </div>
       </section>
       <section class="catalog" data-test="catalog">
         <div class="catalog-up">
@@ -203,37 +198,24 @@
         </select>
         <div class="select-control-block">
         <button
-          type="submit"
           class="button-view button-view-active"
-          name="tile"
-        >
-          <img
-            class="select-control-icon"
-            alt="Показать карточки"
-            src="images/select-contol-icon/show-cards.svg"
-            width="20"
-            height="20"
-          />
-          <span class="visually-hidden">Показать карточки</span>
-        </button>
-        <button type="submit" class="button-view" name="slide">
-          <img
-            class="select-control-icon"
-            alt="Cлайд-шоу"
-            src="images/select-contol-icon/show-slide.svg"
-            width="20"
-            height="20"
-          />
-          <span class="visually-hidden">Cлайд-шоу</span>
-        </button>
-        <button type="submit" class="button-view" name="list">
-          <img
-            class="select-control-icon"
-            alt="Показать список"
-            src="images/select-contol-icon/show-list.svg"
-            width="20"
-            height="20"
-          />
+          type="submit"
+          name="title">
+        <svg aria-hidden="true" focusable="false" width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <g clip-path="url(#a)" fill="#000"><path d="M4 0H0v6h4V0ZM16 0h-4v6h4V0ZM10 0H6v6h4V0ZM4 8H0v6h4V8ZM16 8h-4v6h4V8ZM10 8H6v6h4V8Z"/></g><defs><clipPath id="a"><path fill="#fff" d="M0 0h16v14H0z"/></clipPath></defs>
+        </svg>
+        <span class="visually-hidden">Показать карточки</span>
+      </button>
+      <button  class="button-view" type="submit" name="slide">
+        <svg aria-hidden="true" focusable="false" width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <g clip-path="url(#a)" fill="#000"><path d="M16 12H0v2h16v-2ZM14 2v6H2V2h12Zm2-2H0v10h16V0Z"/></g><defs><clipPath><path fill="#fff" d="M0 0h16v14H0z"/></clipPath></defs>
+        </svg>
+        <span class="visually-hidden">Cлайд-шоу</span>
+      </button>
+      <button  class="button-view" type="submit" name="list">
+        <svg aria-hidden="true" focusable="false" width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <g clip-path="url(#a)" fill="#000"><path d="M2 0H0v2h2V0ZM16 0H4v2h12V0ZM2 4H0v2h2V4ZM16 4H4v2h12V4ZM2 8H0v2h2V8ZM16 8H4v2h12V8ZM2 12H0v2h2v-2ZM16 12H4v2h12v-2Z"/></g><defs><clipPath><path fill="#fff" d="M0 0h16v14H0z"/></clipPath></defs>
+        </svg>
           <span class="visually-hidden">Показать список</span>
         </button>
         </div>
@@ -241,15 +223,13 @@
         <ul class="hotel-list">
           <li class="hotel-item">
             <article class="hotel-card">
-              <a tabindex="-1" href="#">
+              <a href="#" tabindex="-1" >
                 <img
                   class="hotel-card-image"
                   src="images/hotel list/AmaraResortSpa.jpg"
                   width="300"
                   height="212"
-                  alt="Гостиница Amara Resort & Spa"
-                />
-
+                  alt="Гостиница Amara Resort & Spa"/>
               </a>
               <h3 class="hotel-card-title">
                 <a class="hotel-card-link" href="#" tabindex="-1">Amara Resort & Spa</a>
@@ -263,7 +243,6 @@
             <button class="button button-card button-favorites" type="submit">
               в избранное
             </button>
-
           <div class="hotel-card-stars">
             <span class="visually-hidden">4 звезды</span>
             <div class="star-wrapper star-wrapper-4">
@@ -277,15 +256,13 @@
           </li>
           <li class="hotel-item">
             <article class="hotel-card">
-              <a tabindex="-1" href="#">
+              <a  href="#" tabindex="-1">
                 <img
                   class="hotel-card-image"
                   src="images/hotel list/VillasatPocoDiablo.jpg"
                   width="300"
                   height="212"
-                  alt="Гостиница Villas at Poco Diablo"
-                />
-
+                  alt="Гостиница Villas at Poco Diablo"/>
               </a>
               <h3 class="hotel-card-title">
                 <a class="hotel-card-link" href="#" tabindex="-1">Villas at Poco Diablo</a>
@@ -313,7 +290,7 @@
           </li>
           <li class="hotel-item">
             <article class="hotel-card">
-              <a tabindex="-1" href="#">
+              <a  href="#" tabindex="-1">
                 <img
                   class="hotel-card-image"
                   src="images/hotel list/DesertQuailInn.jpg"
@@ -348,7 +325,7 @@
             </li>
           <li class="hotel-item">
             <article class="hotel-card">
-              <a tabindex="-1" href="#">
+              <a  href="#" tabindex="-1">
                 <img
                   class="hotel-card-image"
                   src="images/hotel list/GreenTreeInn.jpg"
@@ -399,8 +376,6 @@
           <li class="pagination-item ">
             <a class="pagination-link pagination-dots" href="#">...</a>
           </li>
-
-
           <li class="pagination-item">
             <a class="pagination-link" href="#">10</a>
           </li>
@@ -409,10 +384,7 @@
       <section class="subscribe-catalog" data-test="subscribe">
         <div class="section-head">
         <h2 class="title">Подпишитесь на рассылку</h2>
-        <p class="subsribe-catalog-description">
-          Только полезная информация и никакого спама,<span class="custom-br"></span>
-          честное бойскаутское!
-        </p>
+        <p class="subsribe-catalog-description">Только полезная информация и никакого спама,<span class="custom-br"></span>честное бойскаутское!</p>
         </div>
         <form
           class="subscribe-form"
@@ -426,32 +398,30 @@
             name="search-email"
             required
           />
-          <button class="button subscribe-button" type="submit">
-            Подписаться
-          </button>
+          <button class="button subscribe-button" type="submit">Подписаться</button>
         </form>
       </section>
     </main>
     <footer class="page-footer" data-test="footer" >
       <ul class="social-list">
-          <li class="social-item">
-              <a class="social-item-icon" href="https://vk.com/htmlacademy" title="Наш Вконтакте">
-                <svg aria-hidden="true" focusable="false" width="24" height="14" viewBox="0 0 24 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path fill="currentColor" d="M23.45.95c.17-.55 0-.95-.8-.95h-2.62c-.67 0-.98.35-1.14.73 0 0-1.34 3.2-3.23 5.27-.61.6-.89.8-1.22.8-.17
+        <li class="social-item">
+          <a class="social-item-icon" href="https://vk.com/htmlacademy" title="Наш Вконтакте">
+            <svg aria-hidden="true" focusable="false" width="24" height="14" viewBox="0 0 24 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill="currentColor" d="M23.45.95c.17-.55 0-.95-.8-.95h-2.62c-.67 0-.98.35-1.14.73 0 0-1.34 3.2-3.23 5.27-.61.6-.89.8-1.22.8-.17
                   0-.42-.2-.42-.74V.95c0-.66-.18-.95-.74-.95H9.15c-.42 0-.67.3-.67.6 0 .61.95.76 1.05 2.5v3.8c0 .84-.16.99-.5.99-.88 0-3.05-3.21-4.33-6.89-.25-.71-.5-1-1.17-1H.9C.15
                   0 0 .35 0 .73c0 .68.89 4.07 4.14 8.55C6.32 12.34 9.38 14 12.15 14c1.67 0 1.88-.37 1.88-1v-2.32c0-.73.16-.88.69-.88.38 0 1.05.2 2.61 1.67C19.11 13.22 19.4 14 20.41 14h2.62c.75
-                  0 1.13-.37.91-1.1-.24-.72-1.09-1.77-2.21-3.02-.62-.7-1.54-1.47-1.81-1.86-.4-.49-.28-.7 0-1.14 0 0 3.2-4.43 3.53-5.93Z"/>
+                  0 1.13-.37.91-1.1-.24-.72-1.09-1.77-2.21-3.02-.62-.7-1.54-1.47-1.81-1.86-.4-.49-.28-.7 0-1.14 0 0 3.2-4.43 3.53-5.93Z" />
                 </svg>
-              <span class="visually-hidden">Vkontakte</span>
-            </a>
-          </li>
-          <li class="social-item">
-            <a class="social-item-icon" href="https://t.me/htmlacademy" title="Наш Telegram">
-              <svg aria-hidden="true" focusable="false" width="19" height="16" viewBox="0 0 19 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path fill="currentColor" d="M17.2853 0.0992597L1.34073 6.24776C0.252584 6.68481 0.258879 7.29184 1.14109 7.56253L5.23469 8.83953L14.7061 2.8637C15.1539 2.59121
-                15.5631 2.7378 15.2268 3.03636L7.55308 9.96185H7.55128L7.55308 9.96275L7.2707 14.1823C7.68438 14.1823 7.86693 13.9925 8.09895 13.7686L10.0873   11.8351L14.2232 14.89C14.9858 15.31 15.5334 15.0941 15.7232 14.1841L18.4382 1.38885C18.7161 0.274623 18.0128 -0.229883 17.2853 0.0992597Z" >
+                <span class="visually-hidden">Vkontakte</span>
+              </a>
+            </li>
+            <li class="social-item">
+              <a class="social-item-icon" href="https://t.me/htmlacademy" title="Наш Telegram">
+                <svg aria-hidden="true" focusable="false" width="19" height="16" viewBox="0 0 19 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path fill="currentColor" d="M17.2853 0.0992597L1.34073 6.24776C0.252584 6.68481 0.258879 7.29184 1.14109 7.56253L5.23469 8.83953L14.7061 2.8637C15.1539 2.59121
+                15.5631 2.7378 15.2268 3.03636L7.55308 9.96185H7.55128L7.55308 9.96275L7.2707 14.1823C7.68438 14.1823 7.86693 13.9925 8.09895 13.7686L10.0873
+                11.8351L14.2232 14.89C14.9858 15.31 15.5334 15.0941 15.7232 14.1841L18.4382 1.38885C18.7161 0.274623 18.0128 -0.229883 17.2853 0.0992597Z" />
               </svg>
-
               <span class="visually-hidden">Telegram</span>
             </a>
           </li>
@@ -460,12 +430,11 @@
               <svg aria-hidden="true" focusable="false" width="23" height="18" viewBox="0 0 23 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path fill="currentColor" d="M19.1072 0.5H3.67437C1.81368 0.5 0.500244 2.09375 0.500244 3.9V13.9937C0.500244 15.9062 1.81368 17.5 3.67437 17.5H19.3261C20.9679 17.5
                 22.5002 15.9062 22.5002 14.1V3.9C22.2813 2.09375 20.9679 0.5 19.1072 0.5ZM8.16194 13.0375V4.9625L15.4953 9L8.16194 13.0375Z" />
-                </svg>
+              </svg>
               <span class="visually-hidden">Youtube</span>
             </a>
           </li>
       </ul>
-      </div>
       <div class="footer-phone">
         <a class="phone" href="tel:+78128121212">+7 (812) 812-12-12</a>
       </div>
@@ -486,5 +455,6 @@
         </a>
       </div>
     </footer>
+  </div>
   </body>
 </html>
