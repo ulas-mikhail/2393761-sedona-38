@@ -775,9 +775,9 @@ body {
   display: flex;
   flex-wrap: wrap;
   list-style: none;
-  margin-bottom: 40px;
   margin: 0;
   padding: 0;
+  margin-bottom: 40px;
 }
 
 .breadcrumbs li::after {
@@ -893,8 +893,9 @@ body {
 .price-range {
   border: none;
   padding: 0;
-  margin-right: 70px;
   margin: 0;
+  margin-right: 70px;
+
 }
 
 .infrastrucure,
@@ -940,8 +941,6 @@ body {
 .range-wrapper-inputs {
   display: flex;
   gap: 2px;
-  min-height: 288px;
-
 }
 
 .price-range-label {
