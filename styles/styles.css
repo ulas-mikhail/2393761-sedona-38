@@ -1260,7 +1260,7 @@ body {
 
 .star-wrapper {
   display: flex;
-  background-image: url("../images/hotel list/star.svg");
+  background-image: url("../images/hotel-list/star.svg");
   background-size: 24px 17px;
   height: 17px;
 }
