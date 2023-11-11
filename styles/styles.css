@@ -139,14 +139,16 @@ body {
   border-radius: 0 4px 4px 0;
 }
 
-
 .subscribe-button:hover,
-.subscribe-button:focus-visible,
 .button-apply:hover,
-.button-apply:focus-visible,
 .button-favorites:hover,
+.modal-button:hover {
+  background-color: #68a2ca;
+}
+
+.subscribe-button:focus-visible,
+.button-apply:focus-visible,
 .button-favorites:focus-visible,
-.modal-button:hover,
 .modal-button:focus-visible {
   background-color: #68a2ca;
 }
