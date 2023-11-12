@@ -4,14 +4,15 @@
     <meta charset="utf-8">
     <title>HTML Academy: Седона</title>
     <link rel="stylesheet" href="styles/styles.css">
-    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon.ico">
+    <link rel="icon" href="images/favicon.png" type="images/png">
   </head>
   <body>
     <div class="page-wrapper">
       <header class="page-header" data-test="header">
-        <a class="navigation-logo" href="index.html">
-          <img class="page-header-logo" alt="Логотип сайта Седона" src="images/header/logo.svg" width="140" height="70">
-        </a>
+        <span class="navigation-logo">
+          <img class="page-header-logo" alt="Логотип сайта Седона." src="images/header/logo.svg" width="140" height="70">
+        </span>
         <nav class="header-navigation">
           <ul class="navigation-list">
             <li class="navigation-item">
@@ -83,7 +84,7 @@
               <div class="advantages-image-wrapper">
                 <img
                 class="advantages-image"
-                alt="Городок в Седоне"
+                alt="Городок в Седоне."
                 src="images/advent-travel/travelhouse.jpg"
                 width="800"
                 height="385">
@@ -126,7 +127,7 @@
               <div class="advantages-image-wrapper">
                 <img
                 class="advantages-image"
-                alt="Мост дьявола"
+                alt="Мост дьявола."
                 src="images/advent-travel/mountains.jpg"
                 width="800"
                 height="385"
@@ -186,11 +187,13 @@
             action="https://echo.htmlacademy.ru/"
             method="post"
           >
+          <label class="visually-hidden" for="newsletter-email">Email</label>
             <input
               class="email-field"
               placeholder="Ваш e-mail"
               type="email"
               name="search-email"
+              id="newsletter-email"
               required
             >
             <button class="button subscribe-button" type="submit">Подписаться</button>
